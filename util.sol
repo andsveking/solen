@@ -53,6 +53,11 @@ function glerr( loc : String )
     end
 end
 
+local RAND_MAX            : int = 2147483647
+function random() : float
+    return rand() as float / RAND_MAX as float
+end
+
 function read_file( file_path : String ) : [byte]
     local SEEK_SET : int = 0
     local SEEK_CUR : int = 1

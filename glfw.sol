@@ -40,112 +40,146 @@ struct int_ptr
 end
 
 !nogc
-extern glfwInit() : int
+!symbol("glfwInit")
+extern Init() : int
 
 !nogc
-extern glfwTerminate()
+!symbol("glfwTerminate")
+extern Terminate()
 
 !nogc
-extern glfwGetVersion(major : [int], minor : [int], rev : [int])
+!symbol("glfwGetVersion")
+extern GetVersion(major : [int], minor : [int], rev : [int])
 
 !nogc
-extern glfwGetVersionString() : String
+!symbol("glfwGetVersionString")
+extern GetVersionString() : String
 
 -- !nogc
 -- extern glfwSetErrorCallback(GLFWerrorfun cbfun) : GLFWerrorfun
 
 !nogc
-extern glfwGetMonitors(count : [int]) : [GLFWmonitor]
+!symbol("glfwGetMonitors")
+extern GetMonitors(count : [int]) : [GLFWmonitor]
 
 !nogc
-extern glfwGetPrimaryMonitor() : GLFWmonitor
+!symbol("glfwGetPrimaryMonitor")
+extern GetPrimaryMonitor() : GLFWmonitor
 
 !nogc
-extern glfwGetMonitorPos(monitor : GLFWmonitor, xpos : [int], ypos : [int])
+!symbol("glfwGetMonitorPos")
+extern GetMonitorPos(monitor : GLFWmonitor, xpos : [int], ypos : [int])
 
 !nogc
-extern glfwGetMonitorPhysicalSize(monitor : GLFWmonitor, widthMM : [int], heightMM : [int])
+!symbol("glfwGetMonitorPhysicalSize")
+extern GetMonitorPhysicalSize(monitor : GLFWmonitor, widthMM : [int], heightMM : [int])
 
 !nogc
-extern glfwGetMonitorName(monitor : GLFWmonitor) : String
+!symbol("glfwGetMonitorName")
+extern GetMonitorName(monitor : GLFWmonitor) : String
 
 -- !nogc
 -- extern glfwSetMonitorCallback(GLFWmonitorfun cbfun) : GLFWmonitorfun
 
 !nogc
-extern glfwGetVideoModes(monitor : GLFWmonitor, count : [int]) : GLFWvidmode
+!symbol("glfwGetVideoModes")
+extern GetVideoModes(monitor : GLFWmonitor, count : [int]) : GLFWvidmode
 
 !nogc
-extern glfwGetVideoMode(monitor : GLFWmonitor) : GLFWvidmode
+!symbol("glfwGetVideoMode")
+extern GetVideoMode(monitor : GLFWmonitor) : GLFWvidmode
 
 !nogc
-extern glfwSetGamma(monitor : GLFWmonitor, gamma : float)
+!symbol("glfwSetGamma")
+extern SetGamma(monitor : GLFWmonitor, gamma : float)
 
 !nogc
-extern glfwGetGammaRamp(monitor : GLFWmonitor) : GLFWgammaramp
+!symbol("glfwGetGammaRamp")
+extern GetGammaRamp(monitor : GLFWmonitor) : GLFWgammaramp
 
 !nogc
-extern glfwSetGammaRamp(monitor : GLFWmonitor, ramp : GLFWgammaramp)
+!symbol("glfwSetGammaRamp")
+extern SetGammaRamp(monitor : GLFWmonitor, ramp : GLFWgammaramp)
 
 !nogc
-extern glfwDefaultWindowHints()
+!symbol("glfwDefaultWindowHints")
+extern DefaultWindowHints()
 
 !nogc
-extern glfwWindowHint(target : int, hint : int)
+!symbol("glfwWindowHint")
+extern WindowHint(target : int, hint : int)
 
 !nogc
-extern glfwCreateWindow(width : int, height : int, title : String, monitor : GLFWmonitor, share : GLFWwindow) : GLFWwindow
+!symbol("glfwCreateWindow")
+extern CreateWindow(width : int, height : int, title : String, monitor : GLFWmonitor, share : GLFWwindow) : GLFWwindow
 
 !nogc
-extern glfwDestroyWindow(window : GLFWwindow)
+!symbol("glfwDestroyWindow")
+extern DestroyWindow(window : GLFWwindow)
 
 !nogc
-extern glfwWindowShouldClose(window : GLFWwindow) : int
+!symbol("glfwWindowShouldClose")
+extern WindowShouldClose(window : GLFWwindow) : int
 
 !nogc
-extern glfwSetWindowShouldClose(window : GLFWwindow, value : int)
+!symbol("glfwSetWindowShouldClose")
+extern SetWindowShouldClose(window : GLFWwindow, value : int)
 
 !nogc
-extern glfwSetWindowTitle(window : GLFWwindow, title : String)
+!symbol("glfwSetWindowTitle")
+extern SetWindowTitle(window : GLFWwindow, title : String)
 
 !nogc
-extern glfwGetWindowPos(window : GLFWwindow, xpos : [int], ypos : [int])
+!symbol("glfwGetWindowPos")
+extern GetWindowPos(window : GLFWwindow, xpos : [int], ypos : [int])
 
 !nogc
-extern glfwSetWindowPos(window : GLFWwindow, xpos : int, ypos : int)
+!symbol("glfwSetWindowPos")
+extern SetWindowPos(window : GLFWwindow, xpos : int, ypos : int)
 
 !nogc
-extern glfwGetWindowSize(window : GLFWwindow, width : [int], height : [int])
+!symbol("glfwGetWindowSize")
+extern GetWindowSize(window : GLFWwindow, width : [int], height : [int])
 
 !nogc
-extern glfwSetWindowSize(window : GLFWwindow, width : int, height : int)
+!symbol("glfwSetWindowSize")
+extern SetWindowSize(window : GLFWwindow, width : int, height : int)
 
 !nogc
-extern glfwGetFramebufferSize(window : GLFWwindow, width : int_ptr, height : int_ptr)
+!symbol("glfwGetFramebufferSize")
+extern GetFramebufferSize(window : GLFWwindow, width : int_ptr, height : int_ptr)
 
 !nogc
-extern glfwGetWindowFrameSize(window : GLFWwindow, left : int_ptr, top : int_ptr, right : int_ptr, bottom : int_ptr)
+!symbol("glfwGetWindowFrameSize")
+extern GetWindowFrameSize(window : GLFWwindow, left : int_ptr, top : int_ptr, right : int_ptr, bottom : int_ptr)
 
 !nogc
-extern glfwIconifyWindow(window : GLFWwindow)
+!symbol("glfwIconifyWindow")
+extern IconifyWindow(window : GLFWwindow)
 
 !nogc
-extern glfwRestoreWindow(window : GLFWwindow)
+!symbol("glfwRestoreWindow")
+extern RestoreWindow(window : GLFWwindow)
 
 !nogc
-extern glfwShowWindow(window : GLFWwindow)
+!symbol("glfwShowWindow")
+extern ShowWindow(window : GLFWwindow)
 
 !nogc
-extern glfwHideWindow(window : GLFWwindow)
+!symbol("glfwHideWindow")
+extern HideWindow(window : GLFWwindow)
 
 !nogc
-extern glfwGetWindowMonitor(window : GLFWwindow) : GLFWmonitor
+!symbol("glfwGetWindowMonitor")
+extern GetWindowMonitor(window : GLFWwindow) : GLFWmonitor
 
 !nogc
-extern glfwGetWindowAttrib(window : GLFWwindow, attrib : int) : int
+!symbol("glfwGetWindowAttrib")
+extern GetWindowAttrib(window : GLFWwindow, attrib : int) : int
 
 !nogc
-extern glfwSetWindowUserPointer(window : GLFWwindow, pointer : uint32)
+!symbol("glfwSetWindowUserPointer")
+extern SetWindowUserPointer(window : GLFWwindow, pointer : uint32)
 
 -- !nogc
 -- extern glfwGetWindowUserPointer(window : GLFWwindow)*
@@ -172,43 +206,56 @@ extern glfwSetWindowUserPointer(window : GLFWwindow, pointer : uint32)
 -- extern glfwSetFramebufferSizeCallback(window : GLFWwindow, GLFWframebuffersizefun cbfun) : GLFWframebuffersizefun
 
 !nogc
-extern glfwPollEvents()
+!symbol("glfwPollEvents")
+extern PollEvents()
 
 !nogc
-extern glfwWaitEvents()
+!symbol("glfwWaitEvents")
+extern WaitEvents()
 
 !nogc
-extern glfwPostEmptyEvent()
+!symbol("glfwPostEmptyEvent")
+extern PostEmptyEvent()
 
 !nogc
-extern glfwGetInputMode(window : GLFWwindow, mode : int) : int
+!symbol("glfwGetInputMode")
+extern GetInputMode(window : GLFWwindow, mode : int) : int
 
 !nogc
-extern glfwSetInputMode(window : GLFWwindow, mode : int, value : int)
+!symbol("glfwSetInputMode")
+extern SetInputMode(window : GLFWwindow, mode : int, value : int)
 
 !nogc
-extern glfwGetKey(window : GLFWwindow, key : int) : int
+!symbol("glfwGetKey")
+extern GetKey(window : GLFWwindow, key : int) : int
 
 !nogc
-extern glfwGetMouseButton(window : GLFWwindow, button : int) : int
+!symbol("glfwGetMouseButton")
+extern GetMouseButton(window : GLFWwindow, button : int) : int
 
 !nogc
-extern glfwGetCursorPos(window : GLFWwindow, xpos : double_ptr, ypos : double_ptr)
+!symbol("glfwGetCursorPos")
+extern GetCursorPos(window : GLFWwindow, xpos : double_ptr, ypos : double_ptr)
 
 !nogc
-extern glfwSetCursorPos(window : GLFWwindow, xpos : double, ypos : double)
+!symbol("glfwSetCursorPos")
+extern SetCursorPos(window : GLFWwindow, xpos : double, ypos : double)
 
 !nogc
-extern glfwCreateCursor(image : GLFWimage, xhot : int, yhot : int) : GLFWcursor
+!symbol("glfwCreateCursor")
+extern CreateCursor(image : GLFWimage, xhot : int, yhot : int) : GLFWcursor
 
 !nogc
-extern glfwCreateStandardCursor(shape : int) : GLFWcursor
+!symbol("glfwCreateStandardCursor")
+extern CreateStandardCursor(shape : int) : GLFWcursor
 
 !nogc
-extern glfwDestroyCursor(cursor : GLFWcursor)
+!symbol("glfwDestroyCursor")
+extern DestroyCursor(cursor : GLFWcursor)
 
 !nogc
-extern glfwSetCursor(window : GLFWwindow, cursor : GLFWcursor)
+!symbol("glfwSetCursor")
+extern SetCursor(window : GLFWwindow, cursor : GLFWcursor)
 
 -- !nogc
 -- extern glfwSetKeyCallback(window : GLFWwindow, GLFWkeyfun cbfun) : GLFWkeyfun
@@ -247,31 +294,40 @@ extern glfwSetCursor(window : GLFWwindow, cursor : GLFWcursor)
 -- extern glfwGetJoystickName(joy : int) : String
 
 !nogc
-extern glfwSetClipboardString(window : GLFWwindow, string : String)
+!symbol("glfwSetClipboardString")
+extern SetClipboardString(window : GLFWwindow, string : String)
 
 !nogc
-extern glfwGetClipboardString(window : GLFWwindow) : String
+!symbol("glfwGetClipboardString")
+extern GetClipboardString(window : GLFWwindow) : String
 
 !nogc
-extern glfwGetTime() : double
+!symbol("glfwGetTime")
+extern GetTime() : double
 
 !nogc
-extern glfwSetTime(time : double)
+!symbol("glfwSetTime")
+extern SetTime(time : double)
 
 !nogc
-extern glfwMakeContextCurrent(window : GLFWwindow)
+!symbol("glfwMakeContextCurrent")
+extern MakeContextCurrent(window : GLFWwindow)
 
 !nogc
-extern glfwGetCurrentContext() : GLFWwindow
+!symbol("glfwGetCurrentContext")
+extern GetCurrentContext() : GLFWwindow
 
 !nogc
-extern glfwSwapBuffers(window : GLFWwindow)
+!symbol("glfwSwapBuffers")
+extern SwapBuffers(window : GLFWwindow)
 
 !nogc
-extern glfwSwapInterval(interval : int)
+!symbol("glfwSwapInterval")
+extern SwapInterval(interval : int)
 
 !nogc
-extern glfwExtensionSupported(extension : String) : int
+!symbol("glfwExtensionSupported")
+extern ExtensionSupported(extension : String) : int
 
 -- !nogc
 -- extern glfwGetProcAddress(procname : String) : GLFWglproc
